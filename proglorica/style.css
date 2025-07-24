@@ -1,0 +1,155 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+/* Establece el body como un contenedor flex vertical para distribuir header, main y footer */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f8f9fa;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+/* Estilos para el encabezado de la página */
+header {
+  background: hsl(0, 2%, 10%); /* Fondo oscuro */
+  color: #fff;         /* Texto blanco */
+  padding: 2rem 0 1rem 0; /* Espaciado superior e inferior */
+  text-align: center;      /* Centra el contenido */
+}
+/* Título principal del header */
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+/* Espaciado superior para la barra de navegación */
+header nav {
+  margin-top: 0.5rem;
+}
+/* Estilos para los enlaces de navegación como botones */
+header nav a {
+  display: inline-block;
+  color: #343a40;           /* Color de texto inicial */
+  background: #ffc107;      /* Fondo amarillo */
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;      /* Bordes redondeados */
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 6px rgba(52,58,64,0.08); /* Sombra ligera */
+  border: none;
+  font-size: 1rem;
+}
+/* Efecto hover/focus para los botones de navegación */
+header nav a:hover,
+header nav a:focus {
+  background: #343a40;      /* Fondo oscuro al pasar el mouse */
+  color: #ffc107;           /* Texto amarillo */
+  box-shadow: 0 4px 12px rgba(52,58,64,0.15); /* Sombra más fuerte */
+  text-decoration: none;
+}
+/* Contenedor principal, centra el contenido */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+  max-height: 500px;
+  overflow-y: auto;
+}
+/* Estilos para el artículo principal */
+article {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+}
+/* Título del artículo */
+article h2 {
+  margin-top: 0;
+  color: #343a40;
+}
+/* Párrafos del artículo */
+article p {
+  color: #495057;
+  line-height: 1.7;
+}
+/* Estilos para el pie de página */
+footer {
+  background: #212222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+  margin-top: auto;
+}
+/* Barras laterales */
+.sidebar-left, .sidebar-right {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 180px;
+  background: #090a0a;
+  color: #fff;
+  padding: 2rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
+.sidebar-left {
+  left: 0;
+  border-right: 2px solid hsl(258, 90%, 51%);
+}
+
+.sidebar-right {
+  right: 0;
+  border-left: 2px solid #4f10fd;
+}
+.sidebar-left nav ul,
+.sidebar-right nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  width: 100%;
+}
+.sidebar-left nav ul li,
+.sidebar-right nav ul li {
+  margin-bottom: 1rem;
+}
+.sidebar-left nav a,
+.sidebar-right nav a {
+  color: #ffc107;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s, background 0.2s;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  display: block;
+  text-align: center;
+}
+.sidebar-left nav a:hover,
+.sidebar-right nav a:hover {
+  background: #ffc107;
+  color: #212529;
+}
+.sidebar-left img,
+.sidebar-right img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+body {
+  padding-left: 180px;
+  padding-right: 180px;
+}
